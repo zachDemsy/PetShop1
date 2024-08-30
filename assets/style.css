@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+:root {
+    --color-body: #000000;
+    --color-heading: #ffffff;
+    --color-background: #252525;
+    --color-p: #989898;
+    --color-base: #f5a623;
+    --color-brand2: #181818;
+    --color-bordor: #636363;
+}
+
+.navbar {
+    background-color: var(--color-body);
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar a {
+    font-weight: bold;
+    float: left;
+    display: block;
+    color: var(--color-heading);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--color-base);
+    border-radius: 20%;
+    color: black;
+}
+
+#loginBtn,
+#signupBtn {
+    background-color: var(--color-base);
+    color: var(--color-brand2);
+    float: right;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 0px 12px;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+body {
+    background-color: var(--color-body);
+    color: var(--color-heading);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+}
+
+
+/*ThanksPage*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+    padding: 10%;
+}
+
+.containt {
+    width: 50%;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+}
+
+.containt .context {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--color_subheading);
+}
+
+.main .image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main .image img {
+    width: 50%;
+    height: 50%;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 25px;
+    grid-column-gap: 15px;
+    --auto-grid-min-size: 315px;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+}
+
+.list .item {
+    min-width: 140px;
+    width: 310px;
+    padding: 15px;
+    background-color: var(--color-brand2);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.list .item:hover {
+    background-color: var(--color-bordor);
+}
+
+.list .item img {
+    width: 100%;
+    height: 50%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.list .item .booking {
+    position: relative;
+}
+
+.list .item .booking .BookingButton {
+    position: absolute;
+    right: 20px;
+    top: -70px;
+    padding: 20px;
+    background-color: var(--color-base);
+    font-weight: 500;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.list .item:hover .booking .BookingButton {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.list .item:hover .booking .BookingButton .BookingForm {
+    text-decoration: none;
+    color: var(--color-heading);
+    font-weight: bolder;
+}
+
+.list.item h4 {
+    color: var(--color-heading);
+    font-size: 32px;
+    margin-bottom: 14px;
+    margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list.item p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--color_subheading);
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+h2 {
+    color: var(--color_heading);
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--color_subheading);
+}
+
+a {
+    color: var(--color-base);
+    text-decoration: none;
+}
+
+.Singupmain {
+    display: flex;
+    flex-direction: row;
+}
+
+.SingUpimage {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.SingUpimage img {
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.Singupcontaint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.Singupcontaint form {
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+}
+
+
+/* .SingUpimage img {
+    align-items: center;
+} */
+
+.Petformcontain form {
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+}
+
+select option {
+    background-color: var(--color-background);
+    color: var(--color-base);
+}
+
+select:hover {
+    background-color: var(--color-base);
+}
+
+form input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+select {
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 12px;
+    padding: 18px 18px;
+    backdrop-filter: blur(50px);
+    box-sizing: border-box;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+}
+
+form button {
+    width: 100%;
+    background: var(--color-base);
+    backdrop-filter: blur(50px);
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin: 7px 0;
+    min-width: 95%;
+    font-size: 18px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+}
+
+.loginmain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+}
+
+.loginimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.loginimage img {
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.logincontaint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logincontaint form {
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    padding: 5%;
+}
